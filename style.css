@@ -2,6 +2,73 @@
 Theme Name : Lapizzeria
 */
 
-body {
-	
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+.clear,
+.clear::after{
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.sr-text {
+	display: none;
+}
+
+.container {
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*
+HEADER
+*/
+
+.site-header {
+	border-bottom: 1px solid #c1c1c1;
+	padding-bottom: 30px;
+}
+div.logo {
+	text-align: center;
+}
+
+@media only screen(min-width: 768px) {
+	div.logo{
+		text-align: left;
+	}
+}
+
+@media only screen(min-width: 992px) {
+	div.logo{
+		text-align: center;
+	}
+}
+
+img.logoimage {
+	width: 250px;
 }
