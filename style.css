@@ -5,10 +5,23 @@ Theme Name : Lapizzeria
 
 html {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+*,
 *:before,
 *:after {
 	box-sizing: inherit;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
 }
 
 h1 {
@@ -44,6 +57,10 @@ h4 {
 	display: none;
 }
 
+.text-center {
+	text-align: center;
+}
+
 /* HEADER */
 
 header.site-header {
@@ -71,6 +88,127 @@ div.address p {
 	text-align: center;
 }
 
+/** Social Menu **/
+nav.socials ul {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+
+nav.socials ul li a:before {
+	font-family: 'FontAwesome';
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
+	content: '\f08e';
+	font-size: 30px;
+	color: #000;
+	-webkit-font-smoothing: antialiased; 
+}
+
+nav.socials li a[href="http://facebook.com"]:before {
+	content: '\f09a';
+}
+
+nav.socials li a[href="http://twitter.com"]:before {
+	content: '\f099';
+}
+
+nav.socials li a[href="http://pinterest.com"]:before {
+	content: '\f231';
+}
+
+nav.socials li a[href="http://youtube.com"]:before {
+	content: '\f16a';
+}
+
+nav.socials li a[href="http://instagram.com"]:before {
+	content: '\f16d';
+}
+
+nav.socials ul li {
+	position: relative;
+	display: inline-block;
+}
+
+/* Main Menu */
+nav.site-nav {
+	display: none;
+}
+
+nav.site-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: table;
+}
+
+/*nav.site-nav ul li {
+	display: table-cell;
+	width: 1%;
+}*/
+
+nav.site-nav ul li a {
+	text-align: center;
+	padding: 20px 0;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	font-family: 'Raleway', sans-serif;
+}
+
+nav.site-nav ul li.current_page_item a {
+	border-bottom: 8px solid #a61206;
+}
+
+/*Hero image*/
+
+.hero {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 450px;
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+.hero:after{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0, 0, 0, 0.6);
+}
+
+.hero .hero-content {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fff;
+	position: relative;
+	z-index: 2;
+}
+.main-content {
+	padding: 60px;
+	background-color: #fff;
+	position: relative;
+}
+
+.content-text p {
+	font-size: 18px;
+	line-height: 50px;
+
+}
+
+
+
+
 
 
 
@@ -95,10 +233,48 @@ div.address p {
 	div.address p {
 		text-align: right;
 	}
+	nav.socials ul {
+		float: right;
+	}
+	nav.site-nav ul li {
+		display: table-cell;
+		width: 1%;
+	}
+	nav.site-nav {
+		display: block;
+	}
+	div.mobile-menu {
+		display: none;
+	}
+	.hero-text {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.main-content {
+		margin-top: -90px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	div.mobile-menu a {
+		height: 40px;
+		background-color: #a61206;
+		width: 100%;
+		display: block;
+		color: #fff;
+		text-align: center;
+		line-height: 40px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: 'Raleway', sans-serif;
+	}
 }
 
 @media only screen and (min-width:992px) {
-		div.logo {
+	div.logo {
 		text-align: center;
+	}
+	.hero-text {
+		width: 60%;
 	}
 }
