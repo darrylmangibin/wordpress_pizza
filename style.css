@@ -2,14 +2,13 @@
 Theme Name : Lapizzeria
 */
 
+
 html {
 	box-sizing: border-box;
 }
-
-*,
 *:before,
 *:after {
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 
 h1 {
@@ -29,14 +28,10 @@ h4 {
 }
 
 .clear,
-.clear::after{
+.clear::after {
 	content: '';
 	clear: both;
 	display: block;
-}
-
-.sr-text {
-	display: none;
 }
 
 .container {
@@ -45,30 +40,65 @@ h4 {
 	margin: 0 auto;
 }
 
-/*
-HEADER
-*/
+.sr-text {
+	display: none;
+}
 
-.site-header {
+/* HEADER */
+
+header.site-header {
 	border-bottom: 1px solid #c1c1c1;
 	padding-bottom: 30px;
 }
+
 div.logo {
 	text-align: center;
 }
 
-@media only screen(min-width: 768px) {
-	div.logo{
+img.logoimage {
+	width: 230px;
+}
+
+div.address {
+	display: block;
+	clear: both;
+	padding-top: 10px
+}
+
+div.address p {
+	margin: 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:768px) {
+	div.logo {
 		text-align: left;
 	}
-}
-
-@media only screen(min-width: 992px) {
-	div.logo{
-		text-align: center;
+	header.site-header .container{
+		position: relative;
+	}
+	header.site-header .header-information{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	div.address p {
+		text-align: right;
 	}
 }
 
-img.logoimage {
-	width: 250px;
+@media only screen and (min-width:992px) {
+		div.logo {
+		text-align: center;
+	}
 }
