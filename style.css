@@ -205,6 +205,82 @@ nav.site-nav ul li.current_page_item a {
 	line-height: 50px;
 
 }
+/*Abour us boxes*/
+
+.box-information .single-box {
+	text-align: center;
+	width: 100%;
+	color: #fff;
+}
+.box-information .single-box img{
+	width: 100%;
+	display: block;
+}
+.box-information .single-box:nth-child(1) {
+	background-color: #f19f39;
+}
+
+.box-information .single-box:nth-child(2) {
+	background-color: #127427;
+
+}
+
+.box-information .single-box:nth-child(3) {
+	background-color: #a61206;
+
+}
+
+.box-information .single-box h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 24px;
+	margin-top: 0;
+}
+.single-box .content-box {
+	padding: 10px;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+/*Footer*/
+footer {
+	margin-top: 50px;
+	padding: 30px 0;
+	border-top: 1px solid #c1c1c1;
+	text-align: center;
+}
+
+footer nav ul{
+	list-style: none;
+}
+
+footer nav ul li {
+	display: inline;
+}
+
+footer nav ul li:last-child .separator {
+	display: none;
+}
+
+footer nav ul li a {
+	color: #000;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
+}
+footer .location {
+	margin-top: 30px;
+}
+
+footer p {
+	margin: 0 0 5px 0;
+	font-size: 14px;
+
+}
+.copy-right {
+	margin-top: 20px;
+}
 
 
 
@@ -216,7 +292,15 @@ nav.site-nav ul li.current_page_item a {
 
 
 
-
+@media only screen and (min-width: 400px){
+	.box-information .single-box {
+		width: 50%;
+		float:left;
+	}
+	.box-information .single-box:last-child {
+		width: 100%;
+	}
+}
 
 @media only screen and (min-width:768px) {
 	div.logo {
@@ -253,7 +337,12 @@ nav.site-nav ul li.current_page_item a {
 	.main-content {
 		margin-top: -90px;
 	}
+	.box-information .single-box,
+	.box-information .single-box:last-child {
+		width: 33.333%;
+	}
 }
+
 
 @media only screen and (max-width: 767px) {
 	div.mobile-menu a {
