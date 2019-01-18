@@ -4,6 +4,8 @@ function lapizzeria_setup() {
 	add_theme_support('post-thumbnails');
 
 	add_image_size('boxes', 437, 291, true);
+
+	add_image_size('specialties', 768, 515, true);
 }
 add_action('after_setup_theme', 'lapizzeria_setup');
 
@@ -35,7 +37,7 @@ function lapizzeria_menus(){
 add_action('init', 'lapizzeria_menus');
 
 
-
+// add custom post type
 function custom_post_type() {
  
 // Set UI labels for Custom Post Type
@@ -64,7 +66,7 @@ function custom_post_type() {
         // Features this CPT supports in Post Editor
         'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
         // You can associate this CPT with a taxonomy or custom taxonomy. 
-        'taxonomies'          => array( 'genres' ),
+        'taxonomies'          => array( 'category' ),
         /* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.
@@ -75,12 +77,13 @@ function custom_post_type() {
         'show_in_menu'        => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
-        'menu_position'       => 5,
+        'menu_position'       => 10,
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
-        'capability_type'     => 'page',
+        'capability_type'     => 'post',
+        'rewirite'   		  => array('slug' => 'specialties')
     );
      
     // Registering your Custom Post Type
