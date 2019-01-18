@@ -44,6 +44,7 @@ function custom_post_type() {
     $labels = array(
         'name'                => _x( 'Pizzas', 'Lapizzeria' ),
         'singular_name'       => _x( 'Pizzas', 'Lapizzeria' ),
+        'name_admin_bar'	  => _x( 'Pizzas', 'admin-menu', 'lapizzeria' ),
         'menu_name'           => __( 'Lapizzeria', 'lapizzaeria' ),
         'parent_item_colon'   => __( 'Parent menu', 'lapizzeria' ),
         'all_items'           => __( 'All Menus', 'lapizzeria' ),
@@ -77,13 +78,14 @@ function custom_post_type() {
         'show_in_menu'        => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
-        'menu_position'       => 10,
+        'query_var'		      => true,
+        'menu_position'       => 6,
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
-        'rewirite'   		  => array('slug' => 'specialties')
+        'rewrite'   		  => array('slug' => 'specialties')
     );
      
     // Registering your Custom Post Type
@@ -97,6 +99,19 @@ function custom_post_type() {
 */
  
 add_action( 'init', 'custom_post_type', 0 );
+
+// widgets
+function lapizzeria_widgets(){
+    register_sidebar(array(
+      'name' => 'Blog Sidebar',
+      'id' => 'blog_sidebar',
+      'before_widget' => '<div class="widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>' 
+    ));
+}
+add_action('widgets_init', 'lapizzeria_widgets');
 
 
  ?>
