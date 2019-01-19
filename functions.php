@@ -12,6 +12,7 @@ add_action('after_setup_theme', 'lapizzeria_setup');
 function lapizzeria_styles() {
 	// adding stylesheet
 	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700,900', array(), '1.0.0');
+    wp_enqueue_style('fluid-box-css', get_template_directory_uri() . '/css/fluidbox.min.css', array(), '1.0');
 	wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0');
 
 	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '4.7');
@@ -20,6 +21,8 @@ function lapizzeria_styles() {
 
 	// scripts
 	wp_enqueue_script('jquery');
+
+    wp_enqueue_script('fluid-box-js', get_template_directory_uri() . '/js/jquery.fluidbox.min.js', array('jquery'), '1.0', true);
 
 	wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
 

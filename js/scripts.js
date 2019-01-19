@@ -42,4 +42,12 @@ $(function() {
 		contentBoxHeight()
 	});
 
+	$('.blocks-gallery-item a').each(function(i, item){
+		$(this).attr('data-fluidbox', '');
+	})
+
+	if($('[data-fluidbox]').length > 0) {
+		$('[data-fluidbox]').fluidbox();
+	}
+
 });

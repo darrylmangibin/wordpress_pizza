@@ -41,7 +41,7 @@ h4 {
 }
 
 .clear,
-.clear::after {
+.clear:after {
 	content: '';
 	clear: both;
 	display: block;
@@ -470,6 +470,19 @@ form.searchform #s {
 	color: #f19f39;
 }
 
+.fluidbox__wrap {
+	height: 100%;
+}
+
+.gallery .gallery-item {
+	width: 50%;
+	margin: 0;
+}
+
+.wp-block-gallery .columns-3 .is-cropped {
+	float: none !important;
+}
+
 
 
 
@@ -545,9 +558,14 @@ form.searchform #s {
 		display: block;
 		clear: both;
 	}
+
+	.wp-block-gallery .columns-3 .is-cropped {
+		float: none;
+	}
+
 	[class*='columns'] {
 		padding: 0 10px;
-		float: left;
+		float: none !important;
 	}
 	.columns1-4 {
 		width: 25%;
