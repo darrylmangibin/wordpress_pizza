@@ -4,11 +4,11 @@ function lapizzeria_save_reservation() {
 	global $wpdb;
 
 	if(isset($_POST['reservation']) && $_POST['hidden'] === '1') {
-		$name = $_POST['name'];
-		$date = $_POST['date'];
-		$email = $_POST['email'];
-		$phone = $_POST['phone'];
-		$message = $_POST['message'];
+		$name = sanitize_text_field($_POST['name']);
+		$date = sanitize_text_field($_POST['date']);
+		$email = sanitize_text_field($_POST['email']);
+		$phone = sanitize_text_field($_POST['phone']);
+		$message = sanitize_text_field($_POST['message']);
 
 		$table = $wpdb->prefix . 'reservations';
 
