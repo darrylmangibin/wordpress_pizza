@@ -39,7 +39,7 @@
 	                	
 	                </textarea>
 	            </div>
-	            <input type="submit" name="submit" class="button" value="SEND">
+	            <input type="submit" name="reservation" class="button" value="SEND">
 	            <input type="hidden" name="hidden" value="1">
 	        </form>
       	</div>
