@@ -33,6 +33,10 @@ function lapizzeria_save_reservation() {
 			$data,
 			$format
 		);
+
+		$url = get_page_by_title( 'Thanks for You Reservation' );
+		wp_redirect(get_permalink($url));
+		exit();
 	}
 }
 add_action('init', 'lapizzeria_save_reservation');
