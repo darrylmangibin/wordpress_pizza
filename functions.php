@@ -10,7 +10,12 @@ function lapizzeria_setup() {
 
 	add_image_size('boxes', 437, 291, true);
 
-	add_image_size('specialties', 768, 515, true);
+    add_image_size('specialties', 768, 515, true);
+
+
+	add_image_size('specialty-portrait', 435, 530, true);
+
+
 }
 add_action('after_setup_theme', 'lapizzeria_setup');
 
